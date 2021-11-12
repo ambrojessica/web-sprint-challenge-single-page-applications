@@ -1,7 +1,8 @@
 import React from 'react';
 //import
-import {Link, Route} from 'react-router-dom';
+import {Link, Route, Switch} from 'react-router-dom';
 import Home from './Home';
+import Pizza from './Pizza';
 
 const App = () => {
   return (
@@ -11,9 +12,15 @@ const App = () => {
       <Link to="/">Home</Link>
       </nav>
 
+      <Switch>
+        <Route path="/pizza">
+        <Pizza />
+      </Route>
+
       <Route path="/">
         <Home />
       </Route>
+      </Switch>
 
     </div>
   );
